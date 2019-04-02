@@ -11,9 +11,13 @@ usage is quite simple, just run:
 
 $ revshell.py IP PORT
 
+
 You can also copy or create a simbolic link to your "bin" folder to execute it from any prompt 
+
 $ cp revshell.py /usr/local/bin/revshell
+
 	OR
+
 $ cp rebshell.py /usr/bin/revshell
 
 check it out!
