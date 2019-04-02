@@ -11,5 +11,10 @@ usage is quite simple, just run:
 
 revshell.py <IP> <PORT>
 
-You can also copy or create a simbolic link to tor "bin" folder to execute it from any prompt 
+You can also copy or create a simbolic link to your "bin" folder to execute it from any prompt 
+
+check it out!
+
+https://youtu.be/5690whKg0Pw
+
 
