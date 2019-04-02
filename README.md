@@ -15,6 +15,5 @@ You can also copy or create a simbolic link to your "bin" folder to execute it f
 
 check it out!
 
-https://youtu.be/5690whKg0Pw
-
+https://youtu.be/tSUJQ65pvCE
 
