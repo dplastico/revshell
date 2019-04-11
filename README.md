@@ -18,7 +18,7 @@ $ cp revshell.py /usr/local/bin/revshell
 
 	OR
 
-$ cp rebshell.py /usr/bin/revshell
+$ cp revshell.py /usr/bin/revshell
 
 check it out!
 
