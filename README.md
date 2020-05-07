@@ -11,6 +11,7 @@ usage is quite simple, just run:
 
 $ revshell.py IP PORT
 
+There's a major designt change now, so I will update the video soon ^^
 
 You can also copy or create a simbolic link to your "bin" folder to execute it from any prompt 
 
