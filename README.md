@@ -9,7 +9,7 @@ Currently supports:
 
 usage is quite simple, just run:
 
-$ revshell.py IP PORT
+$ revshell.py -i IP -p PORT
 
 There's a major designt change now, so I will update the video soon ^^
 
