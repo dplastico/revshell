@@ -21,7 +21,7 @@ $ cp revshell.py /usr/local/bin/revshell
 
 $ cp revshell.py /usr/bin/revshell
 
-check it out!
+check it out! (old version)
 
 https://youtu.be/tSUJQ65pvCE
 
